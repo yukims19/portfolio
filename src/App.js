@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import LandingPage from "./LandingPage";
+import Project from "./Project";
 import heartIcon from "./heart.png";
 import "./App.css";
 
@@ -12,6 +13,7 @@ class App extends Component {
           <img className="heart-icon" src={heartIcon} alt="Heart icon" />
         </header>
         <LandingPage />
+        <Project />
       </div>
     );
   }
