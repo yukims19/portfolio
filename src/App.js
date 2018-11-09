@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import LandingPage from "./LandingPage";
 import Project from "./Project";
-import heartIcon from "./heart.png";
-import "./App.css";
+import heartIcon from "./img/heart.png";
+import "./App.scss";
 
 class App extends Component {
   render() {

@@ -1,0 +1,109 @@
+$design-orange: #ff7800;
+$code-blue: #4ac0f3;
+
+.App {
+  text-align: center;
+}
+.App-header {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  padding: 10px;
+  color: white;
+  position: absolute;
+  z-index: 1;
+}
+.App-header:hover {
+  cursor: pointer;
+}
+.App-header p {
+  margin-left: 1em;
+}
+
+.heart-icon {
+  width: 20px;
+  margin: 10px;
+}
+.landing-page,
+.project {
+  height: 100vh;
+}
+.section-title {
+  font-size: 42px;
+}
+
+.landing-page {
+  background-color: black;
+  background-image: url("./code-background.png");
+  color: white;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+#landing-page-filter {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.7;
+  z-index: 0;
+}
+.landing-page h1 {
+  width: 100%;
+  z-index: 1;
+  font-size: 7vh;
+}
+
+.project {
+  min-height: 580px;
+}
+.recent-project {
+  height: calc(100% - 100px);
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.segregator {
+  width: 20%;
+  height: 50%;
+  border-left: 3px solid $design-orange;
+  border-right: 3px solid $code-blue;
+  max-width: 200px;
+  margin: auto;
+}
+.design-project,
+.coding-project {
+  width: 40%;
+  height: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+  transition: 0.5s;
+}
+.coding-project:hover,
+.design-project:hover {
+  width: 70%;
+  z-index: 1;
+  position: absolute;
+  max-height: 600px;
+}
+.design-project:hover {
+  background-color: $design-orange;
+}
+.coding-project:hover {
+  background-color: $code-blue;
+  right: 0px;
+}
+
+.example {
+  width: 300px;
+  flex-shrink: 0;
+  height: 200px;
+  background-color: #cfcfcf;
+  margin: 70px 0px;
+}
