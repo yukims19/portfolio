@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import LandingPage from "./LandingPage";
 import Project from "./Project";
+import Contact from "./Contact";
 import heartIcon from "./img/heart.png";
 import "./App.scss";
 
@@ -14,6 +15,7 @@ class App extends Component {
         </header>
         <LandingPage />
         <Project />
+        <Contact />
       </div>
     );
   }
