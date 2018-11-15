@@ -1,7 +1,9 @@
 $design-orange: #ff7800;
 $design-orange-background: #ff9c45;
-$code-blue: #4ac0f3;
+$code-blue: #00a7f1;
 $code-blue-background: #53beed;
+$background-gray: #e5e5e5;
+$box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 .App {
   text-align: center;
@@ -39,7 +41,6 @@ $code-blue-background: #53beed;
 .landing-page {
   background-color: black;
   background-image: url("./img/code-background.png");
-  color: white;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -57,10 +58,13 @@ $code-blue-background: #53beed;
   width: 100%;
   z-index: 1;
   font-size: 7vh;
+  color: white;
 }
 
 .project {
   min-height: 580px;
+  width: 100vw;
+  overflow: hidden;
 }
 .recent-project {
   height: calc(100% - 100px);
@@ -72,8 +76,8 @@ $code-blue-background: #53beed;
 .segregator {
   width: 20%;
   height: 50%;
-  border-left: 3px solid $design-orange;
-  border-right: 3px solid $code-blue;
+  border-left: 8px solid $design-orange;
+  border-right: 8px solid $code-blue;
   max-width: 200px;
   margin: auto;
 }
@@ -87,27 +91,121 @@ $code-blue-background: #53beed;
   align-items: center;
   min-height: 520px;
   transition: 0.5s;
+  outline: none;
 
   .project-wrapper {
     width: 100%;
   }
-}
-.coding-project:hover,
-.design-project:hover {
-  width: 70%;
-  z-index: 1;
-  position: absolute;
 
-  .project-overview {
+  .project-overview.extra {
+    display: none;
+  }
+}
+.more-projects-btn {
+  border-radius: 50%;
+  height: 120px;
+  width: 110px;
+  position: absolute;
+  transition: 0.5s;
+
+  img {
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  p {
+    display: none;
+  }
+}
+.more-projects-btn:hover {
+  cursor: pointer;
+  width: 160px;
+  height: 160px;
+
+  p {
+    display: block;
+    width: 100px;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    font-weight: 600;
+    color: white;
+  }
+
+  img {
+    width: 25px;
+    top: 75%;
+  }
+}
+.design-project {
+  .more-projects-btn {
+    left: -65px;
+    background-color: $design-orange-background;
+
+    img {
+      right: 10px;
+    }
+  }
+  .more-projects-btn:hover {
+    background-color: $design-orange;
+
     p {
-      display: flex;
+      right: 0px;
+    }
+
+    img {
+      right: 40px;
     }
   }
 }
-.design-project:hover {
+.coding-project {
+  .more-projects-btn {
+    right: -65px;
+    background-color: $code-blue-background;
+
+    img {
+      left: 10px;
+    }
+  }
+  .more-projects-btn:hover {
+    background-color: $code-blue;
+
+    p {
+      left: 0px;
+    }
+
+    img {
+      left: 40px;
+    }
+  }
+}
+
+.coding-project.expand,
+.design-project.expand {
+  width: 70%;
+  z-index: 100;
+  position: absolute;
+
+  .project-overview.extra {
+    display: block;
+  }
+
+  .project-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    .project-overview {
+      margin: 20px auto;
+    }
+  }
+}
+.design-project.expand {
   background-color: $design-orange-background;
 }
-.coding-project:hover {
+.coding-project.expand {
   background-color: $code-blue-background;
   right: 0px;
   p {
@@ -126,14 +224,6 @@ $code-blue-background: #53beed;
     width: 300px;
     margin: 10px;
   }
-
-  p {
-    display: none;
-    width: 60%;
-    margin: 1rem;
-    text-align: left;
-    align-items: center;
-  }
 }
 
 .contact-methods {
@@ -149,4 +239,74 @@ $code-blue-background: #53beed;
 .contact-icon {
   width: 48px;
   height: 48px;
+}
+
+.about {
+  .about-content {
+    background-color: $background-gray;
+    padding: 100px 0px;
+
+    p {
+      margin: auto;
+      font-size: 1.25rem;
+      width: 80%;
+    }
+  }
+
+  .education-and-industry {
+    box-shadow: $box-shadow;
+    display: flex;
+    margin: 0px 5% 100px 5%;
+    justify-content: space-around;
+
+    .education,
+    .industry {
+      flex: 1 1;
+      padding: 0 10px 20px 10px;
+    }
+    .img-wrapper {
+      width: 80px;
+      height: 80px;
+      margin: auto;
+      box-shadow: $box-shadow;
+      border-radius: 50%;
+      padding: 10px;
+      position: relative;
+      top: -40px;
+    }
+
+    .work-title,
+    .education-title {
+      color: black;
+      font-size: 1.25rem;
+    }
+
+    .education .img-wrapper {
+      background-color: #ffd2a9;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .industry {
+      .img-wrapper {
+        background-color: #83d6f9;
+        img {
+          width: 90%;
+          height: 90%;
+        }
+      }
+      .work-title {
+        text-decoration: underline;
+      }
+      .work-detail {
+        ul {
+          width: 80%;
+          margin: auto;
+          text-align: left;
+          font-size: 12px;
+        }
+      }
+    }
+  }
 }
