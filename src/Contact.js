@@ -11,19 +11,31 @@ class Contact extends Component {
         <h1 className="section-title">Connect With Me</h1>
         <div className="contact-methods">
           <a href="https://github.com/yukims19/">
-            <img className="contact-icon" src={email} alt="email" />
+            <div className="contact-card">
+              <div className="nail" />
+              <img className="contact-icon" src={email} alt="email" />
+            </div>
           </a>
           <a href="https://github.com/yukims19/" target="_blank">
-            <img className="contact-icon" src={github} alt="github" />
+            <div className="contact-card">
+              <div className="nail" />
+              <img className="contact-icon" src={github} alt="github" />
+            </div>
           </a>
           <a
             href="https://www.linkedin.com/in/youxi-li-a6a0274b/"
             target="_blank"
           >
-            <img className="contact-icon" src={linkedin} alt="linkedin" />
+            <div className="contact-card">
+              <div className="nail" />
+              <img className="contact-icon" src={linkedin} alt="linkedin" />
+            </div>
           </a>
           <a href="https://twitter.com/yukims19/" target="_blank">
-            <img className="contact-icon" src={twitter} alt="twitter" />
+            <div className="contact-card">
+              <div className="nail" />
+              <img className="contact-icon" src={twitter} alt="twitter" />
+            </div>
           </a>
         </div>
       </section>
