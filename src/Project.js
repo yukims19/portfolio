@@ -1,11 +1,16 @@
 import React, { Component } from "react";
 import mommafung from "./img/mommafung.jpg";
+import musicPlaylist from "./img/music-playlist.png";
+import homeie from "./img/homeie.png";
+import crunchfield from "./img/crunchfield.png";
 import rightArrow from "./img/right-arrow.png";
 import leftArrow from "./img/left-arrow.png";
-import { Modal, Button } from "antd";
+import { Modal, Button, Card, Icon } from "antd";
 
 const mommafungModal = <div> mommafungModal</div>;
 const idasher = <div> idasher</div>;
+const { Meta } = Card;
+
 class Project extends Component {
   constructor(props) {
     super(props);
@@ -57,6 +62,10 @@ class Project extends Component {
   render() {
     return (
       <section className="project">
+        {this.state.isDesignExpand || this.state.isCodeExpand ? (
+          <div className="project-expand-background" />
+        ) : null}
+
         <h1 className="section-title">Recent Projects</h1>
         <div className="recent-project">
           <div
@@ -76,36 +85,43 @@ class Project extends Component {
               <p>More Design Projects</p>
             </div>
             <div className="project-wrapper">
-              <div className="project-overview">
-                <img
-                  className="project-thumbnail"
-                  src={mommafung}
-                  alt="mommafung"
-                  onClick={this.showModal}
+              <Card
+                className="project-overview-card extra"
+                cover={<img alt="crunchfield" src={crunchfield} />}
+                hoverable={true}
+              >
+                <Meta
+                  title="Home.ie"
+                  description="Mobile Web App - Wifnter 2018"
                 />
-              </div>
-              <div className="project-overview">
-                <img
-                  className="project-thumbnail"
-                  src={mommafung}
-                  alt="mommafung"
-                  onClick={this.showModal}
+              </Card>
+              <Card
+                className="project-overview-card"
+                cover={<img alt="example" src={mommafung} />}
+                hoverable={true}
+              >
+                <Meta title="MonnaFung" description="Website - Winter 2018" />
+              </Card>
+              <Card
+                className="project-overview-card extra"
+                cover={<img alt="music playlist" src={musicPlaylist} />}
+                hoverable={true}
+              >
+                <Meta
+                  title="Home.ie"
+                  description="Mobile Web App - Wifnter 2018"
                 />
-              </div>
-              <div className="project-overview extra">
-                <img
-                  className="project-thumbnail"
-                  src={mommafung}
-                  alt="mommafung"
+              </Card>
+              <Card
+                className="project-overview-card"
+                cover={<img alt="homeie" src={homeie} />}
+                hoverable={true}
+              >
+                <Meta
+                  title="Home.ie"
+                  description="Mobile Web App - Wifnter 2018"
                 />
-              </div>
-              <div className="project-overview extra">
-                <img
-                  className="project-thumbnail"
-                  src={mommafung}
-                  alt="mommafung"
-                />
-              </div>
+              </Card>
             </div>
           </div>
           <div className="segregator" />
@@ -119,34 +135,43 @@ class Project extends Component {
             onBlur={() => this.collapseExpand()}
           >
             <div className="project-wrapper">
-              <div className="project-overview">
-                <img
-                  className="project-thumbnail"
-                  src={mommafung}
-                  alt="mommafung"
+              <Card
+                className="project-overview-card"
+                cover={<img alt="example" src={mommafung} />}
+                hoverable={true}
+              >
+                <Meta title="MonnaFung" description="Website - Winter 2018" />
+              </Card>
+              <Card
+                className="project-overview-card"
+                cover={<img alt="homeie" src={homeie} />}
+                hoverable={true}
+              >
+                <Meta
+                  title="Home.ie"
+                  description="Mobile Web App - Wifnter 2018"
                 />
-              </div>
-              <div className="project-overview">
-                <img
-                  className="project-thumbnail"
-                  src={mommafung}
-                  alt="mommafung"
+              </Card>
+              <Card
+                className="project-overview-card extra"
+                cover={<img alt="crunchfield" src={crunchfield} />}
+                hoverable={true}
+              >
+                <Meta
+                  title="Home.ie"
+                  description="Mobile Web App - Wifnter 2018"
                 />
-              </div>
-              <div className="project-overview extra">
-                <img
-                  className="project-thumbnail"
-                  src={mommafung}
-                  alt="mommafung"
+              </Card>
+              <Card
+                className="project-overview-card extra"
+                cover={<img alt="music playlist" src={musicPlaylist} />}
+                hoverable={true}
+              >
+                <Meta
+                  title="Home.ie"
+                  description="Mobile Web App - Wifnter 2018"
                 />
-              </div>
-              <div className="project-overview extra">
-                <img
-                  className="project-thumbnail"
-                  src={mommafung}
-                  alt="mommafung"
-                />
-              </div>
+              </Card>
             </div>
             <div
               className="more-projects-btn"
