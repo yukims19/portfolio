@@ -1,0 +1,82 @@
+$modal-title-font-size: 4rem;
+$modal-section-title-font-size: 1.75rem;
+$modal-section-segregator-title-font-size: 2.25rem;
+
+.modal-wrapper {
+  height: 100%;
+  overflow: scroll;
+}
+
+.overview {
+  text-align: center;
+
+  .modal-title {
+    font-size: $modal-title-font-size;
+  }
+}
+
+.modal-section-segregator {
+  display: flex;
+  align-items: center;
+
+  .modal-section-title {
+    font-size: $modal-section-segregator-title-font-size;
+    padding: 10px 30px;
+    margin: 0px;
+  }
+  hr {
+    flex: 1 1 auto;
+  }
+}
+
+.modal-section {
+  h2 {
+    font-size: $modal-section-title-font-size;
+  }
+  .flex-container {
+    display: flex;
+  }
+
+  .big-img {
+    width: 80%;
+    display: block;
+    margin: auto;
+  }
+}
+
+/*Mommafung*/
+.mommafung-modal {
+  .persona {
+    justify-content: space-around;
+    align-items: start;
+    img {
+      width: 100%;
+      max-width: 550px;
+      padding: 20px;
+      height: auto;
+      margin: auto;
+    }
+  }
+}
+
+.homeie-modal {
+  .storyboard,
+  .prototype,
+  .user-research {
+    padding: 0px 50px;
+    justify-content: space-around;
+    align-items: start;
+  }
+  img {
+    width: 100%;
+    max-width: 550px;
+    padding: 20px;
+    height: auto;
+    margin: auto;
+    flex: 1 1;
+  }
+  .caption {
+    flex: 1 1;
+    padding: 20px;
+  }
+}

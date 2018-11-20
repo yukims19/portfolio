@@ -6,9 +6,11 @@ import crunchfield from "./img/crunchfield.png";
 import rightArrow from "./img/right-arrow.png";
 import leftArrow from "./img/left-arrow.png";
 import { Modal, Button, Card, Icon } from "antd";
+import MommafungModal from "./MommafungModal";
+import HomeieModal from "./HomeieModal";
 
-const mommafungModal = <div> mommafungModal</div>;
-const idasher = <div> idasher</div>;
+//const mommafungModal = mommafungModal;
+//const idasher = <div> idasher</div>;
 const { Meta } = Card;
 
 class Project extends Component {
@@ -17,12 +19,14 @@ class Project extends Component {
     this.state = {
       visible: false,
       isDesignExpand: false,
-      isCodeExpand: false
+      isCodeExpand: false,
+      content: null
     };
   }
 
-  showModal = () => {
+  showModal = content => {
     this.setState({
+      content,
       visible: true
     });
   };
@@ -32,6 +36,17 @@ class Project extends Component {
     this.setState({
       visible: false
     });
+  };
+
+  displayModalContent = () => {
+    switch (this.state.content) {
+      case "mommafung":
+        return <MommafungModal />;
+      case "homeie":
+        return <HomeieModal />;
+      default:
+        return "Error";
+    }
   };
 
   expandToggle(value) {
@@ -99,6 +114,7 @@ class Project extends Component {
                 className="project-overview-card"
                 cover={<img alt="example" src={mommafung} />}
                 hoverable={true}
+                onClick={() => this.showModal("mommafung")}
               >
                 <Meta title="MonnaFung" description="Website - Winter 2018" />
               </Card>
@@ -116,6 +132,7 @@ class Project extends Component {
                 className="project-overview-card"
                 cover={<img alt="homeie" src={homeie} />}
                 hoverable={true}
+                onClick={() => this.showModal("homeie")}
               >
                 <Meta
                   title="Home.ie"
@@ -184,12 +201,20 @@ class Project extends Component {
         </div>
 
         <Modal
-          title="mommafung"
           visible={this.state.visible}
-          onCancel={this.handleClose}
-          footer={<Button type="primary"> Close</Button>}
+          footer={null}
+          closable={false}
+          width="100vw"
+          style={{
+            height: "100vh"
+          }}
+          className="project-detail-modal"
         >
-          {mommafungModal}
+          <div className="back-btn" onClick={this.handleClose}>
+            <Icon type="left" />
+            Back
+          </div>
+          {this.displayModalContent()}
         </Modal>
       </section>
     );
