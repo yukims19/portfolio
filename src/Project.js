@@ -3,6 +3,9 @@ import mommafung from "./img/mommafung.jpg";
 import musicPlaylist from "./img/music-playlist.png";
 import homeie from "./img/homeie.png";
 import crunchfield from "./img/crunchfield.png";
+import oneProfile from "./img/oneProfile.png";
+import pleaseStarMe from "./img/pleaseStarMe.png";
+import nuclearSub from "./img/nulcearSub.png";
 import rightArrow from "./img/right-arrow.png";
 import leftArrow from "./img/left-arrow.png";
 import { Modal, Button, Card, Icon } from "antd";
@@ -102,41 +105,92 @@ class Project extends Component {
             <div className="project-wrapper">
               <Card
                 className="project-overview-card extra"
-                cover={<img alt="crunchfield" src={crunchfield} />}
+                cover={
+                  <div>
+                    <img alt="crunchfield" src={crunchfield} />
+                    <div className="hover-cover">
+                      <p>
+                        This is a professional website for Momma Fung & Co,
+                        which is a food vendor that sells unicorn buns.
+                      </p>
+                      <button onClick={() => this.showModal("mommafung")}>
+                        Details
+                      </button>
+                    </div>
+                  </div>
+                }
                 hoverable={true}
               >
                 <Meta
                   title="Home.ie"
-                  description="Mobile Web App - Wifnter 2018"
+                  description="Mobile Web App - Winter 2018"
                 />
               </Card>
               <Card
                 className="project-overview-card"
-                cover={<img alt="example" src={mommafung} />}
+                cover={
+                  <div>
+                    <img alt="example" src={mommafung} />
+                    <div className="hover-cover">
+                      <p>
+                        This is a professional website for Momma Fung & Co,
+                        which is a food vendor that sells unicorn buns.
+                      </p>
+                      <button onClick={() => this.showModal("mommafung")}>
+                        Details
+                      </button>
+                    </div>
+                  </div>
+                }
                 hoverable={true}
-                onClick={() => this.showModal("mommafung")}
               >
                 <Meta title="MonnaFung" description="Website - Winter 2018" />
               </Card>
               <Card
                 className="project-overview-card extra"
-                cover={<img alt="music playlist" src={musicPlaylist} />}
+                cover={
+                  <div>
+                    <img alt="music playlist" src={musicPlaylist} />
+                    <div className="hover-cover">
+                      <p>
+                        This is a professional website for Momma Fung & Co,
+                        which is a food vendor that sells unicorn buns.
+                      </p>
+                      <button onClick={() => this.showModal("mommafung")}>
+                        Details
+                      </button>
+                    </div>
+                  </div>
+                }
                 hoverable={true}
               >
                 <Meta
                   title="Home.ie"
-                  description="Mobile Web App - Wifnter 2018"
+                  description="Mobile Web App - Winter 2018"
                 />
               </Card>
               <Card
                 className="project-overview-card"
-                cover={<img alt="homeie" src={homeie} />}
+                cover={
+                  <div>
+                    <img alt="homeie" src={homeie} />
+                    <div className="hover-cover">
+                      <p>
+                        This is a professional website for Momma Fung & Co,
+                        which is a food vendor that sells unicorn buns.
+                      </p>
+                      <button onClick={() => this.showModal("mommafung")}>
+                        Details
+                      </button>
+                    </div>
+                  </div>
+                }
                 hoverable={true}
                 onClick={() => this.showModal("homeie")}
               >
                 <Meta
                   title="Home.ie"
-                  description="Mobile Web App - Wifnter 2018"
+                  description="Mobile Web App - Winter 2018"
                 />
               </Card>
             </div>
@@ -154,30 +208,67 @@ class Project extends Component {
             <div className="project-wrapper">
               <Card
                 className="project-overview-card"
-                cover={<img alt="example" src={mommafung} />}
+                cover={
+                  <div>
+                    <img alt="OneProfile" src={oneProfile} />
+
+                    <div className="hover-cover">
+                      <p>
+                        This is a professional website for Momma Fung & Co,
+                        which is a food vendor that sells unicorn buns.
+                      </p>
+                      <button onClick={() => this.showModal("mommafung")}>
+                        Try it
+                      </button>
+                    </div>
+                  </div>
+                }
                 hoverable={true}
               >
-                <Meta title="MonnaFung" description="Website - Winter 2018" />
+                <Meta
+                  title="OneProfile"
+                  description="Chrome Extension - Summer 2018"
+                />
               </Card>
               <Card
                 className="project-overview-card"
-                cover={<img alt="homeie" src={homeie} />}
+                cover={
+                  <div>
+                    <img alt="pleaseStarMe" src={pleaseStarMe} />
+                    <div className="hover-cover">
+                      <p>
+                        This is a professional website for Momma Fung & Co,
+                        which is a food vendor that sells unicorn buns.
+                      </p>
+                      <button onClick={() => this.showModal("mommafung")}>
+                        Try it
+                      </button>
+                    </div>
+                  </div>
+                }
                 hoverable={true}
               >
-                <Meta
-                  title="Home.ie"
-                  description="Mobile Web App - Wifnter 2018"
-                />
+                <Meta title="PleaseStarMe" description="Web App -  Fall 2018" />
               </Card>
               <Card
                 className="project-overview-card extra"
-                cover={<img alt="crunchfield" src={crunchfield} />}
+                cover={
+                  <div>
+                    <img alt="nuclearSub" src={nuclearSub} />
+                    <div className="hover-cover">
+                      <p>
+                        This is a professional website for Momma Fung & Co,
+                        which is a food vendor that sells unicorn buns.
+                      </p>
+                      <button onClick={() => this.showModal("mommafung")}>
+                        Try it
+                      </button>
+                    </div>
+                  </div>
+                }
                 hoverable={true}
               >
-                <Meta
-                  title="Home.ie"
-                  description="Mobile Web App - Wifnter 2018"
-                />
+                <Meta title="NuclearSub" description="Web App - Fall 2018" />
               </Card>
               <Card
                 className="project-overview-card extra"
@@ -186,7 +277,7 @@ class Project extends Component {
               >
                 <Meta
                   title="Home.ie"
-                  description="Mobile Web App - Wifnter 2018"
+                  description="Mobile Web App - Winter 2018"
                 />
               </Card>
             </div>
