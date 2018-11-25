@@ -110,53 +110,98 @@ $box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   min-height: 520px;
   transition: 0.5s;
   outline: none;
+  position: relative;
+
+  .more-projects-btn {
+      border-radius: 50%;
+      height: 120px;
+      width: 110px;
+      position: absolute;
+      transition: 0.5s;
+      box-shadow: $box-shadow;
+
+      img {
+          width: 30px;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+      }
+      p {
+          display: none;
+      }
+  }
+  .more-projects-btn:hover {
+      cursor: pointer;
+      width: 160px;
+      height: 160px;
+
+      p {
+          display: block;
+          width: 100px;
+          position: absolute;
+          top: 45%;
+          transform: translateY(-50%);
+          font-weight: 600;
+          color: white;
+      }
+
+      img {
+          width: 25px;
+          top: 75%;
+      }
+  }
+
+  .ant-card-hoverable {
+      cursor: default;
+  }
 
   .project-wrapper {
-    width: 100%;
-    // height: 100%;
-  }
-  .ant-card.project-overview-card.extra {
-    display: none;
-  }
-}
-.more-projects-btn {
-  border-radius: 50%;
-  height: 120px;
-  width: 110px;
-  position: absolute;
-  transition: 0.5s;
-  box-shadow: $box-shadow;
-
-  img {
-    width: 30px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  p {
-    display: none;
-  }
-}
-.more-projects-btn:hover {
-  cursor: pointer;
-  width: 160px;
-  height: 160px;
-
-  p {
-    display: block;
-    width: 100px;
-    position: absolute;
-    top: 45%;
-    transform: translateY(-50%);
-    font-weight: 600;
-    color: white;
+      width: 100%;
+      height: 100%;
+      transition: 0.5s;
   }
 
-  img {
-    width: 25px;
-    top: 75%;
+  .project-wrapper.extra {
+      position: absolute;
   }
 }
+
+.design-project.expand,
+.coding-project.expand {
+    z-index: 100;
+
+    .more-projects-btn {
+        z-index: 100;
+    }
+}
+
+.design-project.expand {
+    .project-wrapper{
+        background-color: $design-orange-background;
+        transform: translateX(100%);
+    }
+
+    .project-wrapper.extra{
+        left: 0px;
+        top: 0px;
+        transform: translateX(0);
+    }
+}
+
+.coding-project.expand {
+    .project-wrapper{
+        background-color: $code-blue-background;
+        transform: translateX(-100%);
+    }
+
+    .project-wrapper.extra{
+        left: 0px;
+        top: 0px;
+        transform: translateX(0);
+    }
+}
+
+
 .design-project {
   .more-projects-btn {
     left: -65px;
@@ -166,6 +211,7 @@ $box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       right: 10px;
     }
   }
+
   .more-projects-btn:hover {
     background-color: $design-orange;
 
@@ -177,6 +223,7 @@ $box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       right: 40px;
     }
   }
+
   .ant-card.project-overview-card {
     margin: 30px 30px 30px auto;
 
@@ -184,9 +231,14 @@ $box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       background-color: #8b4900;
     }
   }
+
+  .project-wrapper.extra {
+      transform: translateX(-100%);
+  }
 }
+
 .coding-project {
-  .more-projects-btn {
+    .more-projects-btn {
     right: -65px;
     background-color: $code-blue-background;
 
@@ -194,6 +246,7 @@ $box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       left: 10px;
     }
   }
+
   .more-projects-btn:hover {
     background-color: $code-blue;
 
@@ -205,6 +258,7 @@ $box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       left: 40px;
     }
   }
+
   .ant-card.project-overview-card {
     margin: 30px auto 30px 30px;
 
@@ -212,44 +266,10 @@ $box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       background-color: #045f87;
     }
   }
-}
 
-.coding-project.expand,
-.design-project.expand {
-  width: 75%;
-  z-index: 100;
-  position: absolute;
-
-  .ant-card.project-overview-card {
-    width: 35%;
-    margin: 3%;
-    border: none;
+  .project-wrapper.extra {
+      transform: translateX(100%);
   }
-  .ant-card.project-overview-card.extra {
-    display: block;
-  }
-
-  .project-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-  }
-}
-
-.design-project.expand {
-  background-color: $design-orange-background;
-}
-.coding-project.expand {
-  background-color: $code-blue-background;
-  right: 0px;
-  p {
-    text-align: right;
-  }
-}
-
-.ant-card-hoverable {
-  cursor: default;
 }
 
 .ant-card.project-overview-card {
@@ -306,6 +326,7 @@ $box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
   }
 }
+
 .ant-card.project-overview-card.ant-card-hoverable:hover {
   transform: translate(0px, -20px);
   box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
