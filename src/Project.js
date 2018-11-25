@@ -84,7 +84,7 @@ class Project extends Component {
                  <div className="project-expand-background" />
             ) : null}
 
-            <h1 className="section-title">Recent Projects</h1>
+            <h1 className="section-title">Recent Side Projects</h1>
             <div className="recent-project">
                 <div
                     className={
@@ -121,7 +121,7 @@ class Project extends Component {
                             hoverable={true}
                         >
                             <Meta
-                                title="Music Playlist"
+                                title="Crunchfield"
                                 description="Usability Analysis - Fall 2017"
                             />
                         </Card>
@@ -143,7 +143,7 @@ class Project extends Component {
                             hoverable={true}
                         >
                             <Meta
-                                title="Home.ie"
+                                title="Music Playlist"
                                 description="Prototype - Fall 2017"
                             />
                         </Card>
@@ -168,7 +168,7 @@ class Project extends Component {
                             }
                             hoverable={true}
                         >
-                            <Meta title="MonnaFung" description="Website - Winter 2018" />
+                            <Meta title="MommaFung" description="Website - Winter 2018" />
                         </Card>
                         <Card
                             className="project-overview-card"
