@@ -110,8 +110,7 @@ class Project extends Component {
                                     <img alt="crunchfield" src={crunchfield} />
                                     <div className="hover-cover">
                                         <p>
-                                            This is a professional website for Momma Fung & Co,
-                                            which is a food vendor that sells unicorn buns.
+                                            This is a usability analysis project on the site - Crunchfield. We used Nielsen's 10 heuristics to assess the usability of the site on both desktop and mobile site.
                                         </p>
                                         <button onClick={() => this.showModal("mommafung")}>
                                             Details
@@ -122,8 +121,8 @@ class Project extends Component {
                             hoverable={true}
                         >
                             <Meta
-                                title="Home.ie"
-                                description="Mobile Web App - Winter 2018"
+                                title="Music Playlist"
+                                description="Usability Analysis - Fall 2017"
                             />
                         </Card>
                         <Card
@@ -133,8 +132,7 @@ class Project extends Component {
                                     <img alt="music playlist" src={musicPlaylist} />
                                     <div className="hover-cover">
                                         <p>
-                                            This is a professional website for Momma Fung & Co,
-                                            which is a food vendor that sells unicorn buns.
+                                            This is a prototye for mobile platforms that supports music stream that focuses on redesigning the process of constructing and managing the playlists based on existing major stream apps.
                                         </p>
                                         <button onClick={() => this.showModal("mommafung")}>
                                             Details
@@ -146,7 +144,7 @@ class Project extends Component {
                         >
                             <Meta
                                 title="Home.ie"
-                                description="Mobile Web App - Winter 2018"
+                                description="Prototype - Fall 2017"
                             />
                         </Card>
 
@@ -179,8 +177,7 @@ class Project extends Component {
                                     <img alt="homeie" src={homeie} />
                                     <div className="hover-cover">
                                         <p>
-                                            This is a professional website for Momma Fung & Co,
-                                            which is a food vendor that sells unicorn buns.
+                                            This is a web app that helps housemates track their responsibilities with statistics that provides a way to show what has been done, what needs to be done, and how much each individual has contributed. 
                                         </p>
                                         <button onClick={() => this.showModal("mommafung")}>
                                             Details
@@ -217,12 +214,13 @@ class Project extends Component {
 
                                     <div className="hover-cover">
                                         <p>
-                                            This is a professional website for Momma Fung & Co,
-                                            which is a food vendor that sells unicorn buns.
+                                            This is a chrome extension that will find a person’s GitHub, Youtube, Twitter and other general information based on a link provided. 
                                         </p>
-                                        <button onClick={() => this.showModal("mommafung")}>
-                                            Try it
-                                        </button>
+                                        <a href="https://github.com/yukims19/oneprofile" target='_blank'>
+                                            <button>
+                                                Try it
+                                            </button>
+                                        </a>
                                     </div>
                                 </div>
                             }
@@ -240,12 +238,13 @@ class Project extends Component {
                                     <img alt="pleaseStarMe" src={pleaseStarMe} />
                                     <div className="hover-cover">
                                         <p>
-                                            This is a professional website for Momma Fung & Co,
-                                            which is a food vendor that sells unicorn buns.
+                                            This is a web app that enables users to request star or star for specified GitHub Repositories.
                                         </p>
-                                        <button onClick={() => this.showModal("mommafung")}>
-                                            Try it
-                                        </button>
+                                        <a href="https://www.pleasestarme.com/" target='_blank'>
+                                            <button>
+                                                Try it
+                                            </button>
+                                        </a>
                                     </div>
                                 </div>
                             }
@@ -263,12 +262,14 @@ class Project extends Component {
                                     <img alt="nuclearSub" src={nuclearSub} />
                                     <div className="hover-cover">
                                         <p>
-                                            This is a professional website for Momma Fung & Co,
-                                            which is a food vendor that sells unicorn buns.
+                                            This is a web app that enables users to unsubscribe from all the unwanted emails.
                                         </p>
-                                        <button onClick={() => this.showModal("mommafung")}>
-                                            Try it
-                                        </button>
+                                        <a href="https://github.com/yukims19/Nuclear-sub" target='_blank'>
+                                            <button>
+                                                Try it
+                                            </button>
+                                        </a>
+
                                     </div>
                                 </div>
                             }
