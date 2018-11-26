@@ -2,12 +2,13 @@ $design-orange: #ff7800;
 $design-orange-background: #ff9c45;
 $code-blue: #00a7f1;
 $code-blue-background: #53beed;
-$background-gray: #e5e5e5;
+$background-gray: #f0f2f5;
 $box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 .App {
   text-align: center;
 }
+
 .App-header {
   height: auto;
   display: flex;
@@ -19,17 +20,26 @@ $box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   position: absolute;
   z-index: 1;
 }
+
 .App-header:hover {
   cursor: pointer;
 }
+
 .App-header p {
   margin-left: 1em;
+  margin-bottom: 0px;
 }
 
-.heart-icon {
+header .heart-icon {
   width: 20px;
-  margin: 10px;
+  margin: 0px 10px;
 }
+
+.ant-layout-footer .heart-icon {
+  width: 15px;
+  margin: 0px;
+}
+
 .landing-page {
   height: 100vh;
 }
@@ -113,98 +123,97 @@ $box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   position: relative;
 
   .more-projects-btn {
-      border-radius: 50%;
-      height: 120px;
-      width: 110px;
-      position: absolute;
-      transition: 0.5s;
-      box-shadow: $box-shadow;
+    border-radius: 50%;
+    height: 120px;
+    width: 110px;
+    position: absolute;
+    transition: 0.5s;
+    box-shadow: $box-shadow;
 
-      img {
-          width: 30px;
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-      }
-      p {
-          display: none;
-      }
+    img {
+      width: 30px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    p {
+      display: none;
+    }
   }
   .more-projects-btn:hover {
-      cursor: pointer;
-      width: 160px;
-      height: 160px;
+    cursor: pointer;
+    width: 160px;
+    height: 160px;
 
-      p {
-          display: block;
-          width: 100px;
-          position: absolute;
-          top: 45%;
-          transform: translateY(-50%);
-          font-weight: 600;
-          color: white;
-      }
+    p {
+      display: block;
+      width: 100px;
+      position: absolute;
+      top: 45%;
+      transform: translateY(-50%);
+      font-weight: 600;
+      color: white;
+    }
 
-      img {
-          width: 25px;
-          top: 75%;
-      }
+    img {
+      width: 25px;
+      top: 75%;
+    }
   }
 
   .ant-card-hoverable {
-      cursor: default;
+    cursor: default;
   }
 
   .project-wrapper {
-      width: 100%;
-      height: 100%;
-      transition: 0.5s;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
 
-      a{
-          color: white;
-      }
+    a {
+      color: white;
+    }
   }
 
   .project-wrapper.extra {
-      position: absolute;
+    position: absolute;
   }
 }
 
 .design-project.expand,
 .coding-project.expand {
-    z-index: 100;
+  z-index: 100;
 
-    .more-projects-btn {
-        z-index: 100;
-    }
+  .more-projects-btn {
+    z-index: 100;
+  }
 }
 
 .design-project.expand {
-    .project-wrapper{
-        background-color: $design-orange-background;
-        transform: translateX(100%);
-    }
+  .project-wrapper {
+    background-color: $design-orange-background;
+    transform: translateX(100%);
+  }
 
-    .project-wrapper.extra{
-        left: 0px;
-        top: 0px;
-        transform: translateX(0);
-    }
+  .project-wrapper.extra {
+    left: 0px;
+    top: 0px;
+    transform: translateX(0);
+  }
 }
 
 .coding-project.expand {
-    .project-wrapper{
-        background-color: $code-blue-background;
-        transform: translateX(-100%);
-    }
+  .project-wrapper {
+    background-color: $code-blue-background;
+    transform: translateX(-100%);
+  }
 
-    .project-wrapper.extra{
-        left: 0px;
-        top: 0px;
-        transform: translateX(0);
-    }
+  .project-wrapper.extra {
+    left: 0px;
+    top: 0px;
+    transform: translateX(0);
+  }
 }
-
 
 .design-project {
   .more-projects-btn {
@@ -237,12 +246,12 @@ $box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 
   .project-wrapper.extra {
-      transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }
 
 .coding-project {
-    .more-projects-btn {
+  .more-projects-btn {
     right: -65px;
     background-color: $code-blue-background;
 
@@ -272,7 +281,7 @@ $box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 
   .project-wrapper.extra {
-      transform: translateX(100%);
+    transform: translateX(100%);
   }
 }
 
@@ -344,6 +353,8 @@ $box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   width: 100%;
   display: flex;
   justify-content: center;
+  padding: 20px 0px;
+  margin-bottom: 50px;
 
   a {
     margin: 20px;

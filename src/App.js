@@ -5,7 +5,11 @@ import Project from "./Project";
 import Contact from "./Contact";
 import heartIcon from "./img/heart.png";
 import "./App.scss";
+import { Layout, Menu, Breadcrumb, Icon } from "antd";
+
 import "antd/dist/antd.css";
+
+const { Header, Content, Footer, Sider } = Layout;
 
 class App extends Component {
   render() {
@@ -19,6 +23,11 @@ class App extends Component {
         <About />
         <Project />
         <Contact />
+        <Footer style={{ textAlign: "center" }}>
+          Made with{" "}
+          <img className="heart-icon" src={heartIcon} alt="Heart icon" /> by
+          Youxi Li
+        </Footer>
       </div>
     );
   }

@@ -10,7 +10,7 @@ class Contact extends Component {
       <section className="contact">
         <h1 className="section-title">Connect With Me</h1>
         <div className="contact-methods">
-          <a href="https://github.com/yukims19/">
+          <a href="mailto:yukims19@gmail.com">
             <div className="contact-card">
               <div className="nail" />
               <img className="contact-icon" src={email} alt="email" />
