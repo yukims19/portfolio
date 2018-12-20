@@ -100,7 +100,7 @@ class Project extends Component {
           <div className="project-expand-background" />
         ) : null}
 
-        <h1 className="section-title"> Recent Side Projects</h1>
+        <h1 className="section-title"> Recent Personal Projects</h1>
         <div className="recent-project">
           <div
             className={
@@ -118,62 +118,66 @@ class Project extends Component {
                         <img src={rightArrow} alt="right arrow" />
                         <p>More Design Projects</p>
                         </div>
-                      */}
+                */}
+
+            {/*
             <div className="project-wrapper extra">
-              <Card
-                className="project-overview-card extra"
-                cover={
-                  <div>
-                    <img alt="crunchfield" src={crunchfield} />
-                    <div className="hover-cover">
-                      <p>
-                        This is a usability analysis project. We used Nielsen's
-                        10 heuristics to assess the usability of the site on
-                        both desktop and mobile site.
-                      </p>
-                      <button onClick={() => this.showModal("crunchfield")}>
-                        Details
-                      </button>
-                    </div>
-                  </div>
-                }
-                hoverable={true}
-              >
-                <Meta
-                  title="Crunchfield"
-                  description="Usability Analysis - Fall 2017"
-                />
-              </Card>
-              <Card
-                className="project-overview-card extra"
-                cover={
-                  <div>
-                    <img alt="music playlist" src={musicPlaylist} />
-                    <div className="hover-cover">
-                      <p>
-                        This is a music stream prototye that focuses on
-                        redesigning the process of constructing and managing the
-                        playlists.
-                      </p>
-                      <button onClick={() => this.showModal("crunchfield")}>
-                        Details
-                      </button>
-                    </div>
-                  </div>
-                }
-                hoverable={true}
-              >
-                <Meta
-                  title="Music Playlist"
-                  description="Prototype - Fall 2017"
-                />
-              </Card>
+            <Card
+            className="project-overview-card extra"
+            cover={
+            <div>
+            <img alt="crunchfield" src={crunchfield} />
+            <div className="hover-cover">
+            <p>
+            This is a usability analysis project. We used Nielsen's
+            10 heuristics to assess the usability of the site on
+            both desktop and mobile site.
+            </p>
+            <button onClick={() => this.showModal("crunchfield")}>
+            Details
+            </button>
             </div>
+            </div>
+            }
+            hoverable={true}
+            >
+            <Meta
+            title="Crunchfield"
+            description="Usability Analysis - Fall 2017"
+            />
+            </Card>
+            <Card
+            className="project-overview-card extra"
+            cover={
+            <div>
+            <img alt="music playlist" src={musicPlaylist} />
+            <div className="hover-cover">
+            <p>
+            This is a music stream prototye that focuses on
+            redesigning the process of constructing and managing the
+            playlists.
+            </p>
+            <button onClick={() => this.showModal("crunchfield")}>
+            Details
+            </button>
+            </div>
+            </div>
+            }
+            hoverable={true}
+            >
+            <Meta
+            title="Music Playlist"
+            description="Prototype - Fall 2017"
+            />
+            </Card>
+            </div>
+          */}
             <div className="project-wrapper">
               <Card
                 className="project-overview-card"
                 cover={
                   <div>
+                    <div className="design-ribbon">Design Project</div>
                     <img alt="example" src={mommafung} />
                     <div className="hover-cover">
                       <p>
@@ -194,6 +198,7 @@ class Project extends Component {
                 className="project-overview-card"
                 cover={
                   <div>
+                    <div className="design-ribbon">Design Project</div>
                     <img alt="homeie" src={homeie} />
                     <div className="hover-cover">
                       <p>
@@ -230,8 +235,8 @@ class Project extends Component {
                 className="project-overview-card"
                 cover={
                   <div>
+                    <div className="code-ribbon">Coding Project</div>
                     <img alt="OneProfile" src={oneProfile} />
-
                     <div className="hover-cover">
                       <p>
                         This is a chrome extension that will find a person’s
@@ -258,6 +263,7 @@ class Project extends Component {
                 className="project-overview-card"
                 cover={
                   <div>
+                    <div className="code-ribbon">Coding Project</div>
                     <img alt="pleaseStarMe" src={pleaseStarMe} />
                     <div className="hover-cover">
                       <p>
@@ -275,50 +281,52 @@ class Project extends Component {
                 <Meta title="PleaseStarMe" description="Web App -  Fall 2018" />
               </Card>
             </div>
-            <div className="project-wrapper extra">
-              <Card
-                className="project-overview-card extra"
-                cover={
-                  <div>
-                    <img alt="nuclearSub" src={nuclearSub} />
-                    <div className="hover-cover">
-                      <p>
-                        This is a web app that enables users to unsubscribe from
-                        all the unwanted emails.
-                      </p>
-                      <a
-                        href="https://github.com/yukims19/Nuclear-sub"
-                        target="_blank"
-                      >
-                        <button>Try it</button>
-                      </a>
-                    </div>
-                  </div>
-                }
-                hoverable={true}
-              >
-                <Meta title="NuclearSub" description="Web App - Fall 2018" />
-              </Card>
-              <Card
-                className="project-overview-card extra"
-                cover={<img alt="music playlist" src={musicPlaylist} />}
-                hoverable={true}
-              >
-                <Meta
-                  title="Home.ie"
-                  description="Mobile Web App - Winter 2018"
-                />
-              </Card>
-            </div>
             {/*
-                           <div
-                           className="more-projects-btn"
-                           onClick={() => this.expandToggle("code")}
-                           >
-                           <img src={leftArrow} alt="left arrow" />
-                           <p>More Coding Projects</p>
-                           </div>
-                         */}
+    <div className="project-wrapper extra">
+    <Card
+    className="project-overview-card extra"
+    cover={
+    <div>
+    <img alt="nuclearSub" src={nuclearSub} />
+    <div className="hover-cover">
+    <p>
+    This is a web app that enables users to unsubscribe from
+    all the unwanted emails.
+    </p>
+    <a
+    href="https://github.com/yukims19/Nuclear-sub"
+    target="_blank"
+    >
+    <button>Try it</button>
+    </a>
+    </div>
+    </div>
+    }
+    hoverable={true}
+    >
+    <Meta title="NuclearSub" description="Web App - Fall 2018" />
+    </Card>
+    <Card
+    className="project-overview-card extra"
+    cover={<img alt="music playlist" src={musicPlaylist} />}
+    hoverable={true}
+    >
+    <Meta
+    title="Home.ie"
+    description="Mobile Web App - Winter 2018"
+    />
+    </Card>
+    </div>
+  */}
+            {/*
+    <div
+    className="more-projects-btn"
+    onClick={() => this.expandToggle("code")}
+    >
+    <img src={leftArrow} alt="left arrow" />
+    <p>More Coding Projects</p>
+    </div>
+  */}
           </div>
         </div>
         <Modal

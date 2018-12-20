@@ -50,7 +50,7 @@ class About extends Component {
                 href="https://www.generalforensics.com/"
                 target="_blank"
               >
-                General F orensics
+                GeneralForensics
               </a>
               <div className="work-detail">
                 <p>Software Developer - Winter 2018</p>

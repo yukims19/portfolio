@@ -8,8 +8,8 @@ $box-shadow-weak: 0px 2px 4px rgba(0, 0, 0, 0.05);
 
 .App {
   text-align: center;
-  font-family: "proxima nova light", "Helvetica Neue", Helvetica, Arial,
-    Sans-serif;
+  font-family: avenir-book, AvenirNext-Regular, AppleSDGothicNeo-Medium,
+    Helvetica, Arial, Sans-serif;
 }
 
 .App-header {
@@ -44,8 +44,9 @@ header .heart-icon {
   margin: 0px;
 }
 
-.about, .project{
-    margin-bottom:160px;
+.about,
+.project {
+  margin-bottom: 160px;
 }
 
 h1 {
@@ -55,14 +56,13 @@ h1 {
   height: 100vh;
 }
 .section-title {
-    border-top: solid 3px rgb(0, 0, 0);
-    width: 90%;
-    margin: auto;
-    text-align: left;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: #8c8c8c;
-    font-family: Charter;
+  border-top: solid 3px rgb(0, 0, 0);
+  width: 90%;
+  margin: auto;
+  text-align: left;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #8c8c8c;
 }
 
 .landing-page {
@@ -91,7 +91,7 @@ h1 {
 }
 
 .project {
-//  min-height: 100vh;
+  //  min-height: 100vh;
   width: 100vw;
   overflow: hidden;
   position: relative;
@@ -133,7 +133,7 @@ h1 {
 .coding-project {
   width: 40%;
   height: 100%;
-//  margin-bottom: 20px;
+  //  margin-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,7 +210,7 @@ h1 {
   }
 
   .ant-card.project-overview-card {
-      margin-bottom: 48px;
+    margin-bottom: 48px;
   }
 }
 
@@ -319,9 +319,30 @@ h1 {
   .ant-card-cover {
     border-bottom: 1px solid #e8e8e8;
     position: relative;
+    overflow: hidden;
 
+    .design-ribbon,
+    .code-ribbon {
+      position: absolute;
+      top: 20px;
+      width: 150px;
+      color: white;
+      z-index: 1;
+      transition: 0.3s;
+    }
+    .design-ribbon {
+      left: -14px;
+      background-color: $design-orange;
+      transform: rotate(-30deg);
+    }
+    .code-ribbon {
+      right: -14px;
+      background-color: $code-blue;
+      transform: rotate(30deg);
+    }
     img {
       width: 100%;
+      opacity: 0.8;
     }
 
     .hover-cover {
@@ -374,11 +395,16 @@ h1 {
   .hover-cover {
     opacity: 0.9;
   }
+  .design-ribbon,
+  .code-ribbon {
+    opacity: 0;
+  }
 }
 
 .contact-methods {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   padding: 20px 0px;
   margin-bottom: 50px;
@@ -441,6 +467,10 @@ h1 {
     display: flex;
     margin: 16px 5%;
     justify-content: space-around;
+    font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue",
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
 
     .education,
     .industry {
@@ -481,16 +511,16 @@ h1 {
           height: 90%;
         }
       }
-      .work{
-          width: 80%;
-          margin: auto;
+      .work {
+        width: 80%;
+        margin: auto;
       }
 
       .work-title {
-          float: left;
+        float: left;
       }
       .work-detail {
-          text-align: right;
+        text-align: right;
       }
     }
   }
@@ -522,5 +552,84 @@ h1 {
   }
   .ant-modal-body {
     height: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .landing-page {
+    height: 50vh;
+    position: relative;
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .section-title {
+    margin-bottom: 1rem;
+  }
+
+  .about,
+  project {
+    margin-bottom: 98px;
+  }
+
+  .about {
+    .about-content {
+      padding: 40px 0px;
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    .education-and-industry {
+      flex-flow: column;
+      box-shadow: none;
+
+      .education {
+        padding-bottom: 40px;
+        margin-bottom: 16px;
+        box-shadow: $box-shadow;
+      }
+      .industry {
+        box-shadow: $box-shadow;
+
+        .work {
+          width: 100%;
+        }
+        .work-title {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+
+  .recent-project {
+    flex-direction: column;
+
+    .segregator {
+      display: none;
+      /*      border-top: 8px solid #ff7800;
+      border-bottom: 8px solid #00a7f1;
+      border-left: none;
+      border-right: none;
+      height: 100px;
+      width: 80%;
+      margin-top: 48px;*/
+    }
+
+    .design-project,
+    .coding-project {
+      width: 80%;
+    }
+
+    .ant-card.project-overview-card {
+      width: 100%;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
