@@ -4,9 +4,12 @@ $code-blue: #00a7f1;
 $code-blue-background: #53beed;
 $background-gray: #f0f2f5;
 $box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+$box-shadow-weak: 0px 2px 4px rgba(0, 0, 0, 0.05);
 
 .App {
   text-align: center;
+  font-family: "proxima nova light", "Helvetica Neue", Helvetica, Arial,
+    Sans-serif;
 }
 
 .App-header {
@@ -33,6 +36,7 @@ $box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 header .heart-icon {
   width: 20px;
   margin: 0px 10px;
+  opacity: 0.7;
 }
 
 .ant-layout-footer .heart-icon {
@@ -40,16 +44,31 @@ header .heart-icon {
   margin: 0px;
 }
 
+.about, .project{
+    margin-bottom:160px;
+}
+
+h1 {
+  color: #4f4f4f;
+}
 .landing-page {
   height: 100vh;
 }
 .section-title {
-  font-size: 42px;
+    border-top: solid 3px rgb(0, 0, 0);
+    width: 90%;
+    margin: auto;
+    text-align: left;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #8c8c8c;
+    font-family: Charter;
 }
 
 .landing-page {
   background-color: black;
-  background-image: url("./img/code-background.png");
+  background-image: url("./img/mainback.jpg");
+  background-size: cover;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -60,18 +79,19 @@ header .heart-icon {
   height: 100%;
   width: 100%;
   background-color: black;
-  opacity: 0.7;
+  opacity: 0.6;
   z-index: 0;
 }
 .landing-page h1 {
   width: 100%;
   z-index: 1;
-  font-size: 7vh;
+  font-size: 3.5rem;
   color: white;
+  margin-bottom: 6rem;
 }
 
 .project {
-  min-height: 100vh;
+//  min-height: 100vh;
   width: 100vw;
   overflow: hidden;
   position: relative;
@@ -113,7 +133,7 @@ header .heart-icon {
 .coding-project {
   width: 40%;
   height: 100%;
-  margin-bottom: 20px;
+//  margin-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -129,6 +149,7 @@ header .heart-icon {
     position: absolute;
     transition: 0.5s;
     box-shadow: $box-shadow;
+    z-index: 100;
 
     img {
       width: 30px;
@@ -187,6 +208,10 @@ header .heart-icon {
   .more-projects-btn {
     z-index: 100;
   }
+
+  .ant-card.project-overview-card {
+      margin-bottom: 48px;
+  }
 }
 
 .design-project.expand {
@@ -238,7 +263,7 @@ header .heart-icon {
   }
 
   .ant-card.project-overview-card {
-    margin: 30px 30px 30px auto;
+    margin: 48px 30px 0px auto;
 
     .hover-cover {
       background-color: #8b4900;
@@ -273,7 +298,7 @@ header .heart-icon {
   }
 
   .ant-card.project-overview-card {
-    margin: 30px auto 30px 30px;
+    margin: 48px auto 0px 30px;
 
     .hover-cover {
       background-color: #045f87;
@@ -288,6 +313,8 @@ header .heart-icon {
 .ant-card.project-overview-card {
   width: 63%;
   min-width: 300px;
+  max-width: 320px;
+  box-shadow: $box-shadow-weak;
 
   .ant-card-cover {
     border-bottom: 1px solid #e8e8e8;
@@ -398,20 +425,21 @@ header .heart-icon {
 .about {
   .about-content {
     background-color: $background-gray;
-    padding: 100px 0px;
+    padding: 64px 0px;
 
     p {
       margin: auto;
       font-size: 1.25rem;
       font-weight: 600;
       width: 80%;
+      color: black;
     }
   }
 
   .education-and-industry {
     box-shadow: $box-shadow;
     display: flex;
-    margin: 0px 5% 100px 5%;
+    margin: 16px 5%;
     justify-content: space-around;
 
     .education,
@@ -434,6 +462,8 @@ header .heart-icon {
     .education-title {
       color: black;
       font-size: 1.25rem;
+      line-height: 1;
+      border-bottom: solid 1px;
     }
 
     .education .img-wrapper {
@@ -451,16 +481,16 @@ header .heart-icon {
           height: 90%;
         }
       }
-      .work-title {
-        text-decoration: underline;
-      }
-      .work-detail {
-        ul {
+      .work{
           width: 80%;
           margin: auto;
-          text-align: left;
-          font-size: 12px;
-        }
+      }
+
+      .work-title {
+          float: left;
+      }
+      .work-detail {
+          text-align: right;
       }
     }
   }

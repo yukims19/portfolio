@@ -97,7 +97,7 @@ class Project extends Component {
           <div className="project-expand-background" />
         ) : null}
 
-        <h1 className="section-title">Recent Side Projects</h1>
+        <h1 className="section-title"> Recent Side Projects</h1>
         <div className="recent-project">
           <div
             className={
@@ -195,9 +195,7 @@ class Project extends Component {
                     <div className="hover-cover">
                       <p>
                         This is a web app that helps housemates track their
-                        responsibilities with statistics that provides a way to
-                        show what has been done, what needs to be done, and how
-                        much each individual has contributed.
+                        responsibilities with statistics.
                       </p>
                       <button onClick={() => this.showModal("mommafung")}>
                         Details
@@ -314,11 +312,10 @@ class Project extends Component {
               onClick={() => this.expandToggle("code")}
             >
               <img src={leftArrow} alt="left arrow" />
-              <p>More Design Projects</p>
+              <p>More Coding Projects</p>
             </div>
           </div>
         </div>
-
         <Modal
           visible={this.state.visible}
           footer={null}
