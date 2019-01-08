@@ -8,9 +8,13 @@ class About extends Component {
       <section className="about">
         <div className="about-content">
           <p>
-            I don-not tag myself as a UI/UX designer, Front-end Developer or
-            Full-stack engineer.
-            <br /> I use and learn whatever I need to solve the problems.
+            <strong>Who am I?</strong>
+            <br /> I love coding at night with trap music. I love exploring the
+            influence that different colors, shapes and animations will bring to
+            the project branding and user interaction. I use and learn whatever
+            I need to solve the problems, and I am passionate about
+            collaborating with experts from design, data science and product
+            management fields to deliver innovative projects and ideas.
           </p>
         </div>
         <div className="education-and-industry">
