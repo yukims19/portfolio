@@ -21,7 +21,7 @@ $box-shadow-weak: 0px 2px 4px rgba(0, 0, 0, 0.05);
   padding: 10px;
   color: white;
   position: absolute;
-  z-index: 4;
+  z-index: 3;
   position: fixed;
 }
 
@@ -47,7 +47,7 @@ header .heart-icon {
 
 .about,
 .project {
-  margin-bottom: 160px;
+  padding-bottom: 160px;
 }
 
 h1 {
@@ -55,7 +55,7 @@ h1 {
 }
 
 section {
-  z-index: 3;
+  z-index: 4;
   position: relative;
   background-color: white;
 }
@@ -73,6 +73,7 @@ section {
 .landing-page {
   height: 100vh;
   background-attachment: fixed;
+  z-index: 2;
 
   .landing-page-wrapper {
     position: fixed;
