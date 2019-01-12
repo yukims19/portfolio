@@ -1,10 +1,18 @@
-$modal-title-font-size: 4rem;
-$modal-section-title-font-size: 1.75rem;
-$modal-section-segregator-title-font-size: 2.25rem;
+$modal-title-font-size: 56px;
+$modal-section-title-font-size: 24px;
+
+section {
+  margin-bottom: 56px;
+}
 
 .modal-wrapper {
   height: 100%;
   overflow: scroll;
+
+  p,
+  ul {
+    font-size: 16px;
+  }
 }
 
 .overview {
@@ -12,36 +20,44 @@ $modal-section-segregator-title-font-size: 2.25rem;
 
   .modal-title {
     font-size: $modal-title-font-size;
+    margin-bottom: 18px;
   }
-}
 
-.modal-section-segregator {
-  display: flex;
-  align-items: center;
-
-  .modal-section-title {
-    font-size: $modal-section-segregator-title-font-size;
-    padding: 10px 30px;
-    margin: 0px;
-  }
-  hr {
-    flex: 1 1 auto;
+  p {
+    margin-bottom: 24px;
   }
 }
 
 .modal-section {
   h2 {
     font-size: $modal-section-title-font-size;
+    margin-bottom: 24px;
   }
+
+  img {
+    width: 100%;
+  }
+
+  p {
+    margin-bottom: 16px;
+  }
+
+  .section-content {
+    margin-bottom: 48px;
+  }
+
   .flex-container {
     display: flex;
   }
 
-  .big-img {
+  .example-block {
+    margin: 24px 0px 48px 0px;
+  }
+  /*  .big-img {
     width: 80%;
     display: block;
     margin: auto;
-  }
+  }*/
 }
 
 /*Mommafung*/
