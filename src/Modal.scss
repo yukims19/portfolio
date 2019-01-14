@@ -1,10 +1,6 @@
 $modal-title-font-size: 56px;
 $modal-section-title-font-size: 24px;
 
-section {
-  margin-bottom: 56px;
-}
-
 .modal-wrapper {
   height: 100%;
   overflow: scroll;
@@ -12,6 +8,10 @@ section {
   p,
   ul {
     font-size: 16px;
+  }
+
+  section {
+    margin-bottom: 56px;
   }
 }
 
@@ -25,6 +25,15 @@ section {
 
   p {
     margin-bottom: 24px;
+  }
+
+  .overview-btn {
+    background-color: #00a7f1;
+    border: #00a7f1;
+  }
+
+  .overview-btn:hover {
+    background-color: #53beed;
   }
 }
 

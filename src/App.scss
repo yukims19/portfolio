@@ -9,7 +9,7 @@ $box-shadow-weak: 0px 2px 4px rgba(0, 0, 0, 0.05);
 .App {
   text-align: center;
   font-family: avenir-book, AvenirNext-Regular, AppleSDGothicNeo-Medium,
-    Helvetica, Arial, Sans-serif;
+    Helvetica, Arial, Sans-serif !important;
 }
 
 .App-header {
@@ -489,10 +489,6 @@ section {
     display: flex;
     margin: 16px 5%;
     justify-content: space-around;
-    font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI",
-      "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue",
-      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol";
 
     .education,
     .industry {
