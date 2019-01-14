@@ -256,7 +256,7 @@ const MommafungModal = () => {
                 Objectives
                 <ul>
                   <li>MommaFung's Objective</li>
-                  <li>Audience's Objective</li>
+                  <li>Audience's Ojective</li>
                 </ul>
               </li>
               <li>Personality and Tone</li>
