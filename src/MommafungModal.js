@@ -55,11 +55,11 @@ const MommafungModal = () => {
             </p>
             <p>
               Their business brand is <strong>Cute</strong>,
-              <strong>Modest</strong>, and <strong>Thankful</strong>. Having a
+              <strong> Modest</strong>, and <strong>Thankful</strong>. Having a
               bun in mommafung is not only about making your stomach full, but
-              more importantly the experience of enjoying the look and the taste
-              of the food, witnessing the process the bun is made one by one by
-              hand, and sharing this excitement with your people.
+              more importantly, the experience of enjoying the look and the
+              taste of the food, witnessing the process the bun is made one by
+              one by hand, and sharing this excitement with your people.
             </p>
             <p>
               <i>
@@ -88,7 +88,7 @@ const MommafungModal = () => {
               be limited to young adults who love sharing food picture on the
               social media, during the interview, we realized that many people
               are actually also attracted by the Steam that is produced when
-              buns are cooked, and they enjoys watching the process that the bun
+              buns are cooked, and they enjoy watching the process that the bun
               is made. Some people also simply enjoy the taste because it is so
               delicious.
             </p>
@@ -104,13 +104,18 @@ const MommafungModal = () => {
               </div>
             </div>
             <p>
-              Different kind of users has different user scenarios and use
-              cases. Based on those informations, we made a Features &
-              Functionality Table. <br />
-              Details can be accessed through
-              <a href="https://docs.google.com/document/d/1zopXHcXaYxlprxHJv8hkuImWKTQcA-YrNZpTwvUxRDM/edit?usp=sharing">
-                here.
-              </a>
+              We also summarized user scenarios and use cases for the three
+              kinds of users listed above, and developed a Features &
+              Functionality Table to cover those user needs.
+            </p>
+            <p>
+              <i>
+                Details can be accessed through
+                <a href="https://docs.google.com/document/d/1zopXHcXaYxlprxHJv8hkuImWKTQcA-YrNZpTwvUxRDM/edit?usp=sharing">
+                  {" "}
+                  here.
+                </a>
+              </i>
             </p>
           </Col>
         </Row>
@@ -122,10 +127,10 @@ const MommafungModal = () => {
         <Row className="section-content">
           <Col span={20} offset={2}>
             <p>
-              We conducted a close analysis on each of the competitor website
-              from 6 different aspects : branding, functionality, content, site
-              architecture, navigation, and design. The, we summarized the
-              fundings, and made a list of takeaways for our website.
+              We conducted a close analysis of each of the competitor website
+              from 6 different aspects: branding, functionality, content, site
+              architecture, navigation, and design. Then, we summarized the
+              fundings and made a list of takeaways for our website.
             </p>
 
             <p>
@@ -142,7 +147,7 @@ const MommafungModal = () => {
                     social media links, and press sections.
                   </li>
                   <li>
-                    The address will link to google map navigation, which allow
+                    The address will link to google map navigation, which allows
                     user to easily find the way to access the place
                   </li>
                   <li>
@@ -165,7 +170,7 @@ const MommafungModal = () => {
                 <ul>
                   <li>
                     Rainbow Bagel included their making process as a video. This
-                    demonstrates the hardwork and effort put into the food,
+                    demonstrates the hard work and effort put into the food,
                     providing an insight into the people behind the product and
                     allowing the customers to connect on a deeper level with the
                     brand, the people, and the food.
@@ -177,11 +182,12 @@ const MommafungModal = () => {
             <p>
               Through the process of analyzing the competitor websites, we
               developed a sense of what are the “Goods” and “Bads” that are
-              specific to vendor food industry. For example, food vendors are
-              different from traditional restaurant that they do not have much
-              dish variety in menu, but they have random opening hours and pop
-              up locations. With the uniqueness of vendor’s bussiness style in
-              mind, we developed a Moodboard that will fit MommaFung’s brand.
+              specific to the vendor food industry. For example, food vendors
+              are different from the traditional restaurants that they do not
+              have much dish variety in menu, but they have random opening hours
+              and pop up locations. With the uniqueness of the vendor’s business
+              style in mind, we developed a Moodboard that will fit MommaFung’s
+              brand.
             </p>
             <Row className="example-block">
               <Col span={18} offset={3}>
